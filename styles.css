@@ -306,7 +306,7 @@ p {
   align-items: center;
 }
 .text-container {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .text-container p {
