@@ -239,6 +239,10 @@ p {
 /* HERO MEDIA QUERY */
 
 @media (max-width: 900px) {
+  nav {
+    background-color: rgba(0, 0, 0, 0.345); /* Adjust the opacity as needed */
+    backdrop-filter: blur(3100px);
+  }
   .tagline {
     width: 80%;
     bottom: 10em;
