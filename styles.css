@@ -511,7 +511,7 @@ p {
   }
 }
 
-/* CONTACT US SECTION */
+/* PRODUCT SECTION */
 
 .product-section {
   flex-direction: column;
@@ -704,5 +704,12 @@ p {
   .prev img,
   .next img {
     width: 50px;
+  }
+}
+
+@media (max-width: 350px) {
+  .next-prev .prev,
+  .next-prev .next {
+    top: 55%;
   }
 }
