@@ -601,7 +601,7 @@ p {
 
 .next-prev .prev {
   top: 30%;
-  left: 0;
+  left: 3%;
 }
 
 .car-slider .item {
@@ -678,7 +678,7 @@ p {
     right: 25%;
   }
   .next-prev .prev {
-    left: 18%;
+    left: 20%;
   }
 }
 
