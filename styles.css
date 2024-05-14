@@ -64,6 +64,8 @@ nav,
 
 nav {
   position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 5;
 }
 
 .hero-footer {
@@ -81,7 +83,10 @@ nav {
 .hero-footer p {
   position: relative;
 }
-
+.favicon {
+  width: 96px;
+  height: 96px;
+}
 a,
 p {
   text-decoration: none;
@@ -89,6 +94,18 @@ p {
   font-family: var(--font-family-light);
   font-size: 0.9rem;
   text-transform: uppercase;
+}
+nav {
+  margin-right: 1rem;
+  padding: 0;
+  padding-right: 2rem;
+}
+.logo {
+  width: 100px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .tagline {
@@ -140,6 +157,7 @@ p {
 }
 
 .header {
+  z-index: 2;
   width: 70%;
   height: 100%;
   margin: 0 auto;
@@ -269,6 +287,10 @@ p {
   }
   .header-hero {
     font-size: 12vw;
+  }
+  nav {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -516,8 +538,8 @@ p {
 .product-section {
   flex-direction: column;
   max-width: 100%;
-  height: 100vh;
-  /* border: 2px solid rgb(255, 255, 255); */
+  height: 100%;
+  position: relative;
 }
 
 @keyframes slide {
@@ -532,12 +554,11 @@ p {
 .product-logos {
   position: relative;
   overflow: hidden;
-  padding: 4rem 0;
   height: 100%;
   white-space: nowrap;
-
   display: flex;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .product-logos:hover .logos-slide {
@@ -580,8 +601,8 @@ p {
 }
 
 .car-slider {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 60dvh;
   background: #1a1a1a;
   position: relative;
 }
@@ -609,6 +630,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -711,5 +733,144 @@ p {
   .next-prev .prev,
   .next-prev .next {
     top: 55%;
+  }
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-inline: auto;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.contact-section .header {
+  margin: 0;
+}
+
+.contact-container {
+  position: relative;
+  background-image: url(images/sunder-muthukumaran-ZzxH-0Dbq_M-unsplash.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: 100%;
+  height: 100vh;
+  margin-top: 3rem;
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  align-content: flex-end;
+  object-fit: contain;
+}
+
+.contact-contents {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 700px;
+  gap: 2em;
+  flex-wrap: wrap;
+  backdrop-filter: blur(50px);
+  border-radius: 5px;
+}
+
+.contact-name,
+.email-phone {
+  display: flex;
+  gap: 1em;
+  width: 100%;
+}
+
+.contact-name input {
+  width: 100%;
+}
+
+.email-phone {
+  flex-direction: column;
+  width: 100%;
+}
+
+.text-area {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: var(--font-family-regular);
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: 0.3s ease-in;
+}
+
+.contact-name input,
+.email-phone input {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  transition: 0.3s ease-in;
+  color: #ffffff9c;
+  font-family: var(--font-family-regular);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: black;
+  color: #ffffff8f;
+  border: 1px solid #ffffff36;
+  border-radius: 5px;
+  font-family: var(--font-family-regular);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+  color: #000;
+  font-family: var(--font-family-black);
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(198, 189, 207);
+  margin-left: 4px;
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: rgba(174, 174, 174, 0.385);
+  margin-left: 4px;
+}
+
+.contact-container input:hover {
+  margin-left: 4px;
+}
+
+@media (max-width: 900px) {
+  .contact-name,
+  .email-phone {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-name,
+  .email-phone {
+    flex-direction: column;
+  }
+  .contact-contents {
+    padding: 2rem 1rem;
+  }
+  .contact-section {
+    padding: 0 1rem;
   }
 }
