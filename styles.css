@@ -449,35 +449,12 @@ nav {
   transition: transform 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
 .learn-more:hover {
   background-color: #d29e0f;
   transform: scale(1.05);
 }
 .offer-bg {
   width: 100vw;
-=======
-@media (max-width: 500px) {
-  .section-3 .header {
-    top: -21em;
-    font-size: 1.7rem;
-  }
-
-  .features-container h2 {
-    font-size: 1.1rem;
-  }
-
-  .header-image-wrapper {
-    margin-top: 8rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .section-3 .header {
-    top: -26em;
-    font-size: 1.7rem;
-  }
->>>>>>> 6d4d179af00d6019b72b9a0ea550840c46e00316
 }
 
 /* .feature-cards-container {
