@@ -718,7 +718,7 @@ nav {
 
   .next-prev .prev,
   .next-prev .next {
-    top: 45%;
+    top: 65%;
   }
   .next-prev .next {
     right: 25%;
@@ -757,6 +757,10 @@ nav {
 
 .contact-section .header {
   margin: 0;
+}
+
+.header-p {
+  text-align: center;
 }
 
 .contact-container {
