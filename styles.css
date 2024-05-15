@@ -172,6 +172,12 @@ nav {
   mix-blend-mode: difference;
 }
 
+@media (max-width: 500px) {
+  .header-item {
+    mix-blend-mode: exclusion;
+  }
+}
+
 .header-hero {
   position: relative;
 }
@@ -452,18 +458,22 @@ nav {
 
 @media (max-width: 500px) {
   .section-3 .header {
-    top: -19.7em;
+    top: -21em;
     font-size: 1.7rem;
   }
 
   .features-container h2 {
     font-size: 1.1rem;
   }
+
+  .header-image-wrapper {
+    margin-top: 8rem;
+  }
 }
 
 @media (max-width: 350px) {
   .section-3 .header {
-    top: -25em;
+    top: -26em;
     font-size: 1.7rem;
   }
 }
@@ -739,6 +749,13 @@ nav {
   .next-prev .next {
     top: 85%;
   }
+
+  .car-slider {
+    width: 100%;
+    min-height: 80dvh;
+    background: #1a1a1a;
+    position: relative;
+  }
 }
 
 /* CONTACT SECTION */
@@ -761,6 +778,7 @@ nav {
 
 .header-p {
   text-align: center;
+  font-family: var(--font-family-light);
 }
 
 .contact-container {
@@ -817,6 +835,7 @@ nav {
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   transition: 0.3s ease-in;
+  font-size: 1.2rem;
 }
 
 .contact-name input,
@@ -828,6 +847,7 @@ nav {
   transition: 0.3s ease-in;
   color: #ffffff9c;
   font-family: var(--font-family-regular);
+  font-size: 1.2rem;
 }
 
 .submit-btn {
@@ -869,8 +889,11 @@ input:focus {
   .email-phone {
     flex-direction: column;
   }
+
   .contact-contents {
-    background-color: black;
+    background-color: rgba(83, 82, 82, 0.427);
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
   }
 }
 
@@ -884,5 +907,13 @@ input:focus {
   }
   .contact-section {
     padding: 0 1rem;
+  }
+
+  .contact-section .header {
+    margin: 1rem;
+  }
+
+  .contact-container {
+    height: 100%;
   }
 }
