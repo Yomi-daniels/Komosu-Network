@@ -702,6 +702,11 @@ nav {
   .next-prev .prev {
     left: 20%;
   }
+
+  .next-prev .prev,
+  .next-prev .next {
+    top: 65%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -713,7 +718,7 @@ nav {
 
   .next-prev .prev,
   .next-prev .next {
-    top: 35%;
+    top: 45%;
   }
   .next-prev .next {
     right: 25%;
@@ -732,7 +737,7 @@ nav {
 @media (max-width: 350px) {
   .next-prev .prev,
   .next-prev .next {
-    top: 55%;
+    top: 85%;
   }
 }
 
@@ -859,6 +864,9 @@ input:focus {
   .contact-name,
   .email-phone {
     flex-direction: column;
+  }
+  .contact-contents {
+    background-color: black;
   }
 }
 
