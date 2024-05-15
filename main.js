@@ -1,13 +1,13 @@
-var tl = gsap.timeline({ delay: 1.75 });
-const movements = [-100, 300, 150, -300, -90, 100, -200];
-gsap.set("section", { opacity: 0, display: "none" });
+var tl = gsap.timeline({ delay: 0.7 });
+const movements = [-10, 80, 50, -100, -30, 30, -50];
+gsap.set("section", { opacity: 1 });
 
 gsap.set(".header-hero", { y: 100 });
 gsap.set(".counter p", { y: 35 });
 
 tl.to(".header-hero", {
   y: 0,
-  duration: 1,
+  duration: 0.5,
   ease: "power3.out",
   stagger: 0.1,
 });
@@ -15,15 +15,15 @@ tl.to(".header-hero", {
 tl.from(".tagline", { y: 40, opacity: 0, duration: 0.4 });
 
 tl.to(".counter p", { y: 0, duration: 0.5, ease: "power3.out" }, "-=0.5");
-tl.to(".counter p", { y: -35, duration: 0.5, ease: "power3.out", delay: 0.5 });
+tl.to(".counter p", { y: -35, duration: 0.5, ease: "power3.out", delay: 0.2 });
 
-tl.to(".counter p", { y: -70, duration: 0.5, ease: "power3.out", delay: 0.5 });
+tl.to(".counter p", { y: -70, duration: 0.5, ease: "power3.out", delay: 0.2 });
 
 tl.to(".counter p", {
   y: -105,
-  duration: 0.5,
+  duration: 0.3,
   ease: "power3.out",
-  delay: 0.75,
+  delay: 0.2,
 });
 
 tl.from(".tagline", { y: 40, opacity: 0 }, "-=4");
@@ -43,7 +43,7 @@ const targetFontSize = isSmallDevice
 // Apply the font size using gsap
 tl.to(".header-hero", {
   fontSize: targetFontSize,
-  duration: 1,
+  duration: 0.5,
   ease: "power3.out",
 });
 
@@ -76,13 +76,13 @@ tl.to(
 tl.fromTo(
   "nav",
   { opacity: 0 },
-  { opacity: 1, duration: 1, ease: "power2.out" }
+  { opacity: 1, duration: 0.5, ease: "power2.out" }
 );
 
 tl.fromTo(
   ".hero-footer",
   { opacity: 0 },
-  { opacity: 1, duration: 1.3, ease: "power3.out" }
+  { opacity: 1, duration: 0.5, ease: "power3.out" }
 );
 
 movements.forEach((move, index) => {
@@ -90,7 +90,7 @@ movements.forEach((move, index) => {
     `.h-${index + 2}`,
     {
       y: move,
-      duration: 1,
+      duration: 0.4,
       ease: "power3.out",
     },
     "<"
@@ -101,7 +101,7 @@ tl.to(".tagline", {
   opacity: 0,
 });
 
-tl.to("section", { opacity: 1, display: "flex" });
+tl.to("section", { opacity: 1, duration: 0.4, display: "flex" });
 
 const openMenuBtn = document.getElementById("open-menu");
 const closeMenuBtn = document.getElementById("close-menu");
