@@ -37,7 +37,7 @@ h6 {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background: #000000;
   font-family: satoshi-regular;
 }
