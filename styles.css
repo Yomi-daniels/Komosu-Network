@@ -457,9 +457,6 @@ nav {
   font-size: 3rem;
 }
 
-.features-container {
-  border: 1px solid rgb(4, 85, 0);
-}
 .feature-box {
   max-width: 380px;
   min-height: 200px;
@@ -503,7 +500,6 @@ nav {
   justify-content: center;
   text-align: center;
   gap: 1.5em;
-  box-shadow: 0 10px 10px rgba(23, 79, 138, 0.1);
 }
 
 .features-container {
