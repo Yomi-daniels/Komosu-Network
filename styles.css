@@ -4,6 +4,7 @@
   --font-family-black: satoshi-black;
   --text-color: #eab412c1;
   --light-grey: #7a7a7a;
+  --cream-white: #ccc;
 }
 
 @font-face {
@@ -340,14 +341,21 @@ nav {
 .text-img-wrap {
   display: flex;
   align-items: center;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid brown; */
   gap: 2em;
 }
 
 .header {
   color: #fff;
   font-family: var(--font-family-regular);
+  font-size: 3em;
 }
 
+.section-2-container .header {
+  margin-block: 1em;
+}
 .section-2-container {
   display: flex;
   align-items: center;
@@ -357,7 +365,9 @@ nav {
 }
 
 .text-container p {
-  color: var(--light-grey);
+  color: var(--cream-white);
+  line-height: 1.85;
+  font-size: 1.25em;
 }
 .text-container span {
   color: var(--text-color);
@@ -423,7 +433,7 @@ nav {
 }
 
 .header-image-wrapper {
-  margin-top: 14rem;
+  margin-top: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -443,7 +453,7 @@ nav {
   text-align: center;
   font-size: 4rem;
   position: absolute;
-  top: -30%;
+  top: -35%;
   color: #fff;
   text-shadow: 1px 1px 2px #ffffffdb;
 }
@@ -477,14 +487,15 @@ nav {
 
 .feature-heading {
   font-family: var(--font-family-black);
-  font-size: 1.2rem;
-
+  font-size: 1.5em;
   margin-inline: auto;
 }
+
 .feature-sub {
   line-height: 1.5;
   font-family: 1.1rem;
-  color: var(--light-grey);
+  font-size: 0.85em;
+  color: var(--cream-white);
 }
 
 .feature-cards-container {
@@ -503,8 +514,16 @@ nav {
 }
 
 .features-container {
-  margin: 4rem 0;
+  /* border: 1px solid #db0000; */
+  margin: 15% 0;
   max-width: 1300px;
+}
+
+.features-container h2 {
+  font-size: 2rem;
+
+  max-width: 75%;
+  margin-inline: auto;
 }
 /* 
 .feature-box {
@@ -536,7 +555,8 @@ nav {
 
   .section-3 .header {
     font-size: 3rem;
-    top: -8em;
+    top: -20em;
+    border: 1px solid brown;
     z-index: 1;
     line-height: 1.2;
   }
@@ -569,6 +589,7 @@ nav {
 
   .feature-cards-container {
     display: grid;
+
     grid-template-columns: repeat(2, minmax(350px, 1fr));
   }
 
@@ -604,7 +625,7 @@ nav {
   }
 
   .section-3 .header {
-    top: -16em;
+    top: -em;
     font-size: 2rem;
   }
 
@@ -873,7 +894,8 @@ nav {
   margin: 0.2rem;
   border-radius: 7.25%;
   flex: 1;
-  max-width: 23rem;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
 }
@@ -897,7 +919,18 @@ nav {
 
 .pricing-cost-wrapper {
   display: flex;
+  flex-direction: column;
+}
+.pricing-info {
+  display: flex;
   align-items: center;
+  color: #000;
+}
+.pricing-info-before {
+  color: var(--cream-white);
+}
+.pricing-info-before .pricing-cost {
+  text-decoration: line-through;
 }
 
 .pricing-duration {
@@ -916,6 +949,7 @@ nav {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: var(--cream-white);
 }
 
 .check-icon {
@@ -933,6 +967,8 @@ nav {
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s;
+  border-radius: 2em;
+  margin-right: auto;
 }
 
 .pricing-button:hover {
